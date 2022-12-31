@@ -14,16 +14,26 @@ body{
 }
 
 .sidebar{
+    padding-left: 10px;
+    padding-top: 10px;
     grid-area: sidebar;
-    background-color: rgba(0, 195, 255, 0.534);
+    background-color: #334155;
+    color: white;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: grid;
+    grid-template: repeat(12, 45px) / 1fr;
 }
+
+
 
 .header{
     grid-area: header;
-    background-color: rgba(255, 255, 255, 0.89);
+    background-color: #94a3b8;
 }
 
 .maincontent{
     grid-area: maincontent;
-    background-color: rgba(184, 184, 184, 0.514);
+    background-color: #64748b;
 }
