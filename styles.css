@@ -1,39 +1,156 @@
 body{
+    font-family: "mulish", sans-serif;
     margin: 0;
     padding: 0;
     height: 100vh;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
-    grid-template-areas: 'sidebar header header header header header'
-    'sidebar maincontent maincontent maincontent maincontent maincontent'
-    'sidebar maincontent maincontent maincontent maincontent maincontent'
-    'sidebar maincontent maincontent maincontent maincontent maincontent'
-    'sidebar maincontent maincontent maincontent maincontent maincontent'
-    'sidebar maincontent maincontent maincontent maincontent maincontent';
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-template-areas: 'sidebar header header header header header header header'
+    'sidebar maincontent maincontent maincontent maincontent maincontent maincontent maincontent'
+    'sidebar maincontent maincontent maincontent maincontent maincontent maincontent maincontent'
+    'sidebar maincontent maincontent maincontent maincontent maincontent maincontent maincontent'
+    'sidebar maincontent maincontent maincontent maincontent maincontent maincontent maincontent'
+    'sidebar maincontent maincontent maincontent maincontent maincontent maincontent maincontent'
+    'sidebar maincontent maincontent maincontent maincontent maincontent maincontent maincontent'
+    'sidebar maincontent maincontent maincontent maincontent maincontent maincontent maincontent'
+    'sidebar maincontent maincontent maincontent maincontent maincontent maincontent maincontent'
+    'sidebar maincontent maincontent maincontent maincontent maincontent maincontent maincontent';
 }
 
 .sidebar{
     padding-left: 10px;
     padding-top: 10px;
     grid-area: sidebar;
-    background-color: #334155;
+    background-color: #363740;
     color: white;
     font-family: sans-serif;
     font-size: 20px;
     font-weight: bold;
     display: grid;
-    grid-template: repeat(12, 45px) / 1fr;
+    grid-template: repeat(20, 1fr) / 1fr;
 }
 
+.title{
+    grid-row-start: 1;
+    grid-row-end: 4;
+    padding-top: 10px;
+    padding-left: 5px;
+}
 
+.overview{
+    grid-row-start: 4;
+    grid-row-end: 5;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.tickets{
+    grid-row-start: 5;
+    grid-row-end: 6;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.agents{
+    grid-row-start: 6;
+    grid-row-end: 7;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.history{
+    grid-row-start: 7;
+    grid-row-end: 8;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.tasks{
+    grid-row-start: 8;
+    grid-row-end: 9;
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.settings{
+    grid-row-start: -4;
+    grid-row-end: -3;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+.support{
+    grid-row-start: -3;
+    grid-row-end: -2;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
+
+.privacy{
+    grid-row-start: -2;
+    grid-row-end: -1;
+    padding-bottom: 10px;
+    padding-left: 5px;
+}
 
 .header{
     grid-area: header;
-    background-color: #94a3b8;
+    background-color: #f7f8fc;;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    color: black;
+    font-size: 30px;
+}
+
+.leftheader{
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    gap: 10px;
 }
 
 .maincontent{
     grid-area: maincontent;
-    background-color: #64748b;
+    background-color: #f7f8fc;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    padding: 15px;
+    gap: 15px;
+}
+
+.block {
+    background-color: white;
+    border: 2px solid #d1d5db;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.text{
+    color: #6b7280;
+}
+
+.num{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.trendcontainer{
+    background-color: white;
+    border: 2px solid #d1d5db;
+    border-radius: 5px;
+    grid-column: 1 / 6;
+    grid-row: 2 / 6;
+}
+
+.trendcontainer > img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
 }
